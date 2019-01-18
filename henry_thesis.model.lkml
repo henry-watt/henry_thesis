@@ -11,3 +11,17 @@ datagroup: henry_thesis_default_datagroup {
 persist_with: henry_thesis_default_datagroup
 
 explore: accidents {}
+
+explore: aircraft {}
+
+explore: aircraft_models {}
+
+explore: airports {}
+
+explore: carriers {}
+
+explore: flights {}
+
+explore: flights_by_day {}
+
+explore: ontime {}
