@@ -124,7 +124,7 @@ view: accidents {
 
   dimension: number_of_fatalities {
     type: number
-    sql: ${TABLE}.number_of_fatalities ;;
+    sql: CAST(${TABLE}.number_of_fatalities AS SIGNED) ;;
   }
 
   dimension: number_of_minor_injuries {
