@@ -123,7 +123,7 @@ view: accidents {
   }
 
   dimension: number_of_fatalities {
-    type: string
+    type: number
     sql: ${TABLE}.number_of_fatalities ;;
   }
 
