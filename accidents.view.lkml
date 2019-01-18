@@ -188,6 +188,6 @@ view: accidents {
 
   measure: fatalities_count {
     type: sum
-    sql:${TABLE}.number_of_fatalities ;;
+    sql:${number_of_fatalities} ;;
   }
 }
