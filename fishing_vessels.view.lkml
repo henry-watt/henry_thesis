@@ -36,8 +36,6 @@ view: fishing_vessels {
     sql: ${TABLE}.flag ;;
   }
 
-
-
   dimension: length {
     type: number
     sql: ${TABLE}.length ;;
