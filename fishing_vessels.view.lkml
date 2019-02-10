@@ -63,6 +63,7 @@ view: fishing_vessels {
     sql: ${TABLE}.geartype ;;
     link: {
       url: "{{ fishing_vessels.url_field._value }}"
+      label: "{{ value }}"
     }
   }
 
