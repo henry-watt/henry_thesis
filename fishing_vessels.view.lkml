@@ -44,6 +44,7 @@ view: fishing_vessels {
   dimension: mmsi {
     type: number
     sql: ${TABLE}.mmsi ;;
+    primary_key: yes
   }
 
   dimension: tonnage {
