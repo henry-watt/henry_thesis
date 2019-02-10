@@ -36,10 +36,7 @@ view: fishing_vessels {
     sql: ${TABLE}.flag ;;
   }
 
-  dimension: geartype {
-    type: string
-    sql: ${TABLE}.geartype ;;
-  }
+
 
   dimension: length {
     type: number
@@ -60,4 +57,28 @@ view: fishing_vessels {
     type: count
     drill_fields: []
   }
+
+  dimension: url_field {
+    hidden: yes
+    type: string
+    sql:
+        CASE
+            WHEN ${geartype} = 'trawlers' THEN ('https://en.wikipedia.org/wiki/Fishing_trawler')
+            WHEN ${geartype} = 'fixed_gear' THEN ('https://definedterm.com/fixed_gear/178332')
+            WHEN ${geartype} = 'purse_seines' THEN ('https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-purse-seineshttps://www.fisheries.noaa.gov/national/bycatch/fishing-gear-purse-seines')
+            WHEN ${geartype} = 'drifting_longlines' THEN ('http://www.fao.org/fishery/geartype/233/en')
+            WHEN ${geartype} = 'squid_jigger' THEN ('http://www.fao.org/fishery/vesseltype/330/en')
+            WHEN ${geartype} = 'other_fishing' THEN ('http://www.fao.org/fishery/vesseltype/search/en')
+            ELSE NULL
+        END ;;
+  }
+
+  dimension: geartype {
+    type: string
+    sql: ${TABLE}.geartype ;;
+      link: {
+        url: "{{fishing_vessels.url_field._value}}"
+      }
+  }
 }
+
