@@ -30,4 +30,8 @@ view: fishing_effort_byvessel {
     type: count
     drill_fields: []
   }
+
+  measure: sum {
+    type: sum
+  }
 }
