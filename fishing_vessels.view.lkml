@@ -73,7 +73,7 @@ view: fishing_vessels {
         CASE
             WHEN ${geartype} = 'trawlers' THEN ('https://en.wikipedia.org/wiki/Fishing_trawler')
             WHEN ${geartype} = 'fixed_gear' THEN ('https://definedterm.com/fixed_gear/178332')
-            WHEN ${geartype} = 'purse_seines' THEN ('https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-purse-seineshttps://www.fisheries.noaa.gov/national/bycatch/fishing-gear-purse-seines')
+            WHEN ${geartype} = 'purse_seines' THEN ('https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-purse-seines')
             WHEN ${geartype} = 'drifting_longlines' THEN ('http://www.fao.org/fishery/geartype/233/en')
             WHEN ${geartype} = 'squid_jigger' THEN ('http://www.fao.org/fishery/vesseltype/330/en')
             WHEN ${geartype} = 'other_fishing' THEN ('http://www.fao.org/fishery/vesseltype/search/en')
