@@ -31,7 +31,8 @@ view: fishing_effort_byvessel {
     drill_fields: []
   }
 
-  measure: sum {
+  measure: total_fishing_hours{
     type: sum
+    sql: ${fishing_hours} ;;
   }
 }
