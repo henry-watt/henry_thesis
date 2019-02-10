@@ -24,7 +24,6 @@ view: fishing_effort_byvessel {
   dimension: mmsi {
     type: number
     sql: ${TABLE}.mmsi ;;
-    primary_key: yes
   }
 
   measure: count {
@@ -35,5 +34,11 @@ view: fishing_effort_byvessel {
   measure: total_fishing_hours{
     type: sum
     sql: ${fishing_hours} ;;
+  }
+  dimension: compound_primary_key {
+    primary_key: yes
+    hidden: yes
+    type: string
+    sql: CONCAT(CAST(${TABLE}.date AS STRING), ' ', CAST(${TABLE}.primary_key.mmsi AS STRING) ;;
   }
 }
