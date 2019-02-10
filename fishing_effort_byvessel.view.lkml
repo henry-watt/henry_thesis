@@ -24,6 +24,7 @@ view: fishing_effort_byvessel {
   dimension: mmsi {
     type: number
     sql: ${TABLE}.mmsi ;;
+    primary_key: yes
   }
 
   measure: count {
