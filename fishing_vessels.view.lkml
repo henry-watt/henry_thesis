@@ -58,6 +58,14 @@ view: fishing_vessels {
     drill_fields: []
   }
 
+  dimension: geartype {
+    type: string
+    sql: ${TABLE}.geartype ;;
+    link: {
+      url: "{{ fishing_vessels.url_field._value }}"
+    }
+  }
+
   dimension: url_field {
     hidden: yes
     type: string
@@ -72,13 +80,4 @@ view: fishing_vessels {
             ELSE NULL
         END ;;
   }
-
-  dimension: geartype {
-    type: string
-    sql: ${TABLE}.geartype ;;
-      link: {
-        url: "{{fishing_vessels.url_field._value}}"
-      }
-  }
 }
-
