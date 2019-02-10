@@ -39,6 +39,6 @@ view: fishing_effort_byvessel {
     primary_key: yes
     hidden: yes
     type: string
-    sql: CONCAT(CAST(${TABLE}.date AS STRING), ' ', CAST(${TABLE}.primary_key.mmsi AS STRING) ;;
+    sql: CONCAT(CAST(${TABLE}.date AS STRING), ' ', CAST(${TABLE}.mmsi AS STRING) ;;
   }
 }
