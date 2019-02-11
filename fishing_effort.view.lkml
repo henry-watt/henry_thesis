@@ -57,4 +57,9 @@ view: fishing_effort {
     sql:${lon_bin}/100 ;;
   }
 
+  measure: total_fishing_hours {
+    type: sum
+    sql: ${fishing_hours} ;;
+    value_format_name: decimal_0
+  }
 }
