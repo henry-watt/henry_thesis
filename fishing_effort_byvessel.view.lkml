@@ -52,4 +52,10 @@ view: fishing_effort_byvessel {
     type: number
     sql:${lon_bin}/100 ;;
   }
+
+  dimension: coordinates{
+    type: location
+    sql_latitude:${latitude_bin} ;;
+    sql_longitude:${longitude_bin} ;;
+  }
 }
