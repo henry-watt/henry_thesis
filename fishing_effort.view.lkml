@@ -45,4 +45,15 @@ view: fishing_effort {
     type: count
     drill_fields: []
   }
+
+  dimension: latitude_bin {
+    type:  number
+    sql:${lat_bin}/100 ;;
+  }
+
+  dimension: longitude_bin {
+    type: number
+    sql:${lon_bin}/100 ;;
+  }
+
 }
