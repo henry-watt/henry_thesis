@@ -45,12 +45,12 @@ view: fishing_effort_byvessel {
 
   dimension: latitude_bin {
     type:  number
-    sql:${lat_bin}/100 ;;
+    sql:${lat_bin}/10 ;;
   }
 
   dimension: longitude_bin {
     type: number
-    sql:${lon_bin}/100 ;;
+    sql:${lon_bin}/10 ;;
   }
 
   dimension: coordinates{
