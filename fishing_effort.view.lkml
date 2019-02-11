@@ -62,4 +62,10 @@ view: fishing_effort {
     sql: ${fishing_hours} ;;
     value_format_name: decimal_0
   }
+
+  dimension: coordinates{
+    type: location
+    sql_latitude:${latitude_bin} ;;
+    sql_longitude:${longitude_bin} ;;
+  }
 }
