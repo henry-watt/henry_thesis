@@ -42,4 +42,14 @@ view: fishing_effort_byvessel {
     type: string
     sql: CONCAT(CAST(${TABLE}.date AS STRING), ' ', CAST(${TABLE}.mmsi AS STRING)) ;;
   }
+
+  dimension: latitude_bin {
+    type:  number
+    sql:${lat_bin}/100 ;;
+  }
+
+  dimension: longitude_bin {
+    type: number
+    sql:${lon_bin}/100 ;;
+  }
 }
