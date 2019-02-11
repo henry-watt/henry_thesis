@@ -9,6 +9,7 @@ view: fishing_effort {
   dimension: fishing_hours {
     type: number
     sql: ${TABLE}.fishing_hours ;;
+    value_format_name: "decimal_1"
   }
 
   dimension: flag {
