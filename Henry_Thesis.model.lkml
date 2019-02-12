@@ -3,6 +3,13 @@ connection: "lookerdata_standard_sql"
 include: "*.view.lkml"                       # include all views in this project
 # include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 
+map_layer: countries_maritime {
+  file: "countries-maritime.topojson"
+  format: topojson
+  property_key: "A3"
+}
+
+
 explore: fishing_effort {}
 explore: fishing_effort_byvessel {}
 explore: fishing_vessels {}

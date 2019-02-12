@@ -15,6 +15,7 @@ view: fishing_effort {
   dimension: flag {
     type: string
     sql: ${TABLE}.flag ;;
+    map_layer_name: countries_maritime
   }
 
   dimension: geartype {
