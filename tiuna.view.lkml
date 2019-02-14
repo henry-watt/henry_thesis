@@ -159,7 +159,6 @@ view: tiuna {
       UNION ALL
       SELECT
       '2014-10-26' AS date, 352419000 AS mmsi, -0.94 AS latitude, -80.8 AS longitude
-      UNION ALL
 
       ;;
   }
