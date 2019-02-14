@@ -14,6 +14,7 @@ explore: fishing_effort {}
 explore: fishing_effort_byvessel {}
 explore: fishing_vessels {}
 explore: vessels {}
+explore: tiuna {}
 
 explore: fishing_timelines {
   view_name: fishing_effort_byvessel
