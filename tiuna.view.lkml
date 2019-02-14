@@ -1,5 +1,6 @@
 view: tiuna {
   derived_table: {
+    persist_for: "24 hours"
     sql:
       SELECT
       '2014-10-02' AS date, 352419000 AS mmsi, 8.82 AS latitude, -79.64 AS longitude
