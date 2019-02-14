@@ -189,7 +189,7 @@ view: tiuna {
     type: count
   }
 
-  dimension: coordinates{
+  dimension: coordinates {
     type: location
     sql_latitude:${latitude} ;;
     sql_longitude:${longitude} ;;
