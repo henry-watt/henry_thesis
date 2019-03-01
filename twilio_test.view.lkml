@@ -12,6 +12,9 @@ view: twilio_test {
       derived_column: geopoint{
         sql: ST_GEOGPOINT(longitude_bin,latitude_bin) ;;
       }
+      derived_column: Within_5_km? {
+        sql: ST_DWithin(geopoint, ST_GEOGPOINT(55.2286111,-7.78944444), 5000) ;;
+      }
 
     }
   }

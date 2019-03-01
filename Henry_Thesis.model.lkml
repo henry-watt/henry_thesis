@@ -1,7 +1,7 @@
 connection: "lookerdata_standard_sql"
 
 include: "*.view.lkml"                       # include all views in this project
-# include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
+include: "*.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 
 map_layer: countries_maritime {
   file: "countries-maritime.topojson"
