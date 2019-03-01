@@ -32,6 +32,8 @@ view: twilio_test {
   }
   dimension: date {}
 
-  measure: geopoint {}
+  dimension: geopoint {}
+
+  dimension: within {}
 
 }
