@@ -64,7 +64,7 @@ view: fishing_effort_byvessel {
   }
 
   dimension: within {
-    sql: ST_DWithin(${geopoint}, ST_GEOGPOINT(-7.78944444, 55.2286111), 5000) ;;
+    sql: ST_DWithin(${geopoint}, ST_GEOGPOINT(-7.78944444, 55.2286111), 50000) ;;
     type: yesno
   }
 }
