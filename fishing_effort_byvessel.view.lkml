@@ -58,4 +58,8 @@ view: fishing_effort_byvessel {
     sql_latitude:${latitude_bin} ;;
     sql_longitude:${longitude_bin} ;;
   }
+
+  dimension: within {
+        sql: ST_DWithin(ST_GEOGPOINT({longitude_bin},{latitude_bin}), ST_GEOGPOINT(-7.78944444, 55.2286111), 5000) ;;
+  }
 }
