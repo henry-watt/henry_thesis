@@ -545,7 +545,7 @@ view: ISO3 {
       'PRI' AS code, 'Puerto Rico' AS name
       UNION ALL
       SELECT
-      'PRK' AS code, 'Korea, Democratic People's Republic of' AS name
+      'PRK' AS code, 'Korea, Democratic Peoples Republic of' AS name
       UNION ALL
       SELECT
       'PRT' AS code, 'Portugal' AS name
