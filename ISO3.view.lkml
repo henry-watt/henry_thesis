@@ -374,7 +374,7 @@ view: ISO3 {
       'KWT' AS code, 'Kuwait' AS name
       UNION ALL
       SELECT
-      'LAO' AS code, 'Lao People's Democratic Republic' AS name
+      'LAO' AS code, 'Lao Peoples Democratic Republic' AS name
       UNION ALL
       SELECT
       'LBN' AS code, 'Lebanon' AS name
