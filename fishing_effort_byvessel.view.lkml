@@ -71,6 +71,6 @@ view: fishing_effort_byvessel {
   dimension: 8_billion {
     type: number
     sql:8000000000 ;;
-    value_format: "0"
+    value_format_name: decimal_0
   }
 }
