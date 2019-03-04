@@ -1,4 +1,4 @@
-view: iso_3_codes {
+view: ISO3 {
   derived_table: {
     sql:
       SELECT

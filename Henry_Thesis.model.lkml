@@ -15,6 +15,7 @@ explore: fishing_effort_byvessel {}
 explore: fishing_vessels {}
 explore: vessels {}
 explore: tiuna {}
+explore: ISO3 {}
 explore: twilio_test {}
 explore: fishing_timelines {
   view_name: fishing_effort_byvessel
@@ -22,5 +23,10 @@ explore: fishing_timelines {
     type: inner
     relationship: many_to_one
     sql_on: ${fishing_effort_byvessel.mmsi} = ${fishing_vessels.mmsi} ;;
+  }
+  join: ISO3 {
+    type: inner
+    relationship: one_to_one
+    sql_on: ${fishing_vessels.flag} = ${ISO3.code};;
   }
 }
