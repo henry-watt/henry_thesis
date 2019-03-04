@@ -747,9 +747,6 @@ view: ISO3 {
       UNION ALL
       SELECT
       'ZWE' AS code, 'Zimbabwe' AS name
-      UNION ALL
-      SELECT
-      NULL AS code
 
       ;;
   }
