@@ -134,7 +134,7 @@ view: ISO3 {
       'CHN' AS code, 'China' AS name
       UNION ALL
       SELECT
-      'CIV' AS code, 'Côte d'Ivoire' AS name
+      'CIV' AS code, 'Côte dIvoire' AS name
       UNION ALL
       SELECT
       'CMR' AS code, 'Cameroon' AS name
