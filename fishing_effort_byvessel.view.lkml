@@ -68,9 +68,22 @@ view: fishing_effort_byvessel {
     type: yesno
   }
 
-  dimension: 8_billion {
+  dimension: 3_billion {
     type: number
-    sql:8000000000 ;;
+    sql:3000000000 ;;
     value_format_name: decimal_0
+    link: {
+      label: "WWF"
+      url: "https://www.worldwildlife.org/industries/sustainable-seafood"
+      }
+  }
+
+  measure: 90_percent {
+    type: number
+    sql: 90 ;;
+    link: {
+      label: "Guardian Overfishing Article"
+      url: "https://www.theguardian.com/environment/2016/jul/07/global-fish-production-approaching-sustainable-limit-un-warns"
+    }
   }
 }
