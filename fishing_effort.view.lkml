@@ -80,4 +80,18 @@ view: fishing_effort {
     sql:lower(${flag});;
     html: <img src="https://raw.githubusercontent.com/adamoliver/Country-Flags-ISO-3/master/gif/{{rendered_value}}.gif"/> ;;
   }
+
+  dimension: fishing_type{
+    type: string
+    sql:
+        CASE
+            WHEN ${geartype} = 'trawlers' THEN 'Trawler'
+            WHEN ${geartype} = 'fixed_gear' THEN 'Fixed Gear'
+            WHEN ${geartype} = 'purse_seines' THEN 'Purse Seine'
+            WHEN ${geartype} = 'drifting_longlines' THEN 'Drifting Longline'
+            WHEN ${geartype} = 'squid_jigger' THEN 'Squid Jigger'
+            WHEN ${geartype} = 'other_fishing' THEN 'Other Fishing Type'
+            ELSE NULL
+        END ;;
+  }
 }
