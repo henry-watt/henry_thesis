@@ -16,6 +16,11 @@ explore: fishing_effort {
     relationship: one_to_one
     sql_on: ${fishing_effort.flag} = ${population.code};;
   }
+  join: ISO3 {
+    type: inner
+    relationship: one_to_one
+    sql_on: ${fishing_effort.flag} = ${ISO3.code};;
+  }
 }
 explore: fishing_effort_byvessel {}
 explore: fishing_vessels {}
