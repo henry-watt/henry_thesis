@@ -86,4 +86,5 @@ view: fishing_effort_byvessel {
       url: "https://www.theguardian.com/environment/2016/jul/07/global-fish-production-approaching-sustainable-limit-un-warns"
     }
   }
+
 }
