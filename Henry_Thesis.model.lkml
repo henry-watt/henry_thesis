@@ -46,6 +46,8 @@ explore: ISO3 {}
 
 explore: twilio_test {}
 
+explore: corinthian_bay {}
+
 explore: fishing_timelines {
   view_name: fishing_effort_byvessel
   join: fishing_vessels {
