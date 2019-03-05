@@ -83,6 +83,7 @@ view: fishing_effort_byvessel {
   measure: 90_percent {
     type: number
     sql: 90 ;;
+    label: "Percentage of the world’s fish stocks are either overfished or fully exploited"
     link: {
       label: "Guardian Overfishing Article"
       url: "https://www.theguardian.com/environment/2016/jul/07/global-fish-production-approaching-sustainable-limit-un-warns"

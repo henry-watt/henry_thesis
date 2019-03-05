@@ -23,11 +23,29 @@ explore: fishing_effort {
   }
 }
 explore: fishing_effort_byvessel {}
-explore: fishing_vessels {}
+
+explore: fishing_vessels {
+  join: ISO3 {
+    type: inner
+    relationship: one_to_one
+    sql_on: ${fishing_vessels.flag} = ${ISO3.code};;
+    }
+
+  join: population {
+    type: inner
+    relationship: one_to_one
+    sql_on: ${ISO3.code} = ${population.code};;
+  }
+  }
+
 explore: vessels {}
+
 explore: tiuna {}
+
 explore: ISO3 {}
+
 explore: twilio_test {}
+
 explore: fishing_timelines {
   view_name: fishing_effort_byvessel
   join: fishing_vessels {
@@ -45,4 +63,4 @@ explore: fishing_timelines {
     relationship: one_to_one
     sql_on: ${ISO3.code} = ${population.code};;
   }
-}
+  }
