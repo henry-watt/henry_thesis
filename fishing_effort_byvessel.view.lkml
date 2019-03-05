@@ -36,6 +36,8 @@ view: fishing_effort_byvessel {
     sql: ${fishing_hours} ;;
     value_format_name: decimal_0
   }
+
+
   dimension: compound_primary_key {
     primary_key: yes
     hidden: yes

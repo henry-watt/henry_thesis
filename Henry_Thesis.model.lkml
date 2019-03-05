@@ -10,7 +10,13 @@ map_layer: countries_maritime {
 }
 
 
-explore: fishing_effort {}
+explore: fishing_effort {
+  join: population {
+    type: inner
+    relationship: one_to_one
+    sql_on: ${fishing_effort.flag} = ${population.code};;
+  }
+}
 explore: fishing_effort_byvessel {}
 explore: fishing_vessels {}
 explore: vessels {}
@@ -28,5 +34,10 @@ explore: fishing_timelines {
     type: inner
     relationship: one_to_one
     sql_on: ${fishing_vessels.flag} = ${ISO3.code};;
+  }
+  join: population {
+    type: inner
+    relationship: one_to_one
+    sql_on: ${ISO3.code} = ${population.code};;
   }
 }
