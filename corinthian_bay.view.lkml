@@ -127,4 +127,10 @@ view: corinthian_bay {
   measure: count {
     type: count
   }
+
+  dimension: coordinates {
+    type: location
+    sql_latitude:${lat} ;;
+    sql_longitude:${long} ;;
+  }
 }
