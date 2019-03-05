@@ -75,4 +75,9 @@ view: fishing_effort {
     sql_latitude:${latitude_bin} ;;
     sql_longitude:${longitude_bin} ;;
   }
+
+  dimension: flag_link {
+    sql:lower(${flag});;
+    html: <img src="https://raw.githubusercontent.com/adamoliver/Country-Flags-ISO-3/master/gif/{{rendered_value}}.gif"/> ;;
+  }
 }
