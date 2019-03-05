@@ -67,6 +67,7 @@ view: fishing_effort {
   measure: fishing_hours_per_capita {
     type: number
     sql: ${total_fishing_hours}/${population.population};;
+    value_format_name: decimal_4
   }
 
   dimension: coordinates{
