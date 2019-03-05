@@ -86,4 +86,9 @@ view: fishing_vessels {
     type: string
     html: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Margiris_%28ship%2C_1985%29_KL_749_Margiris_Klaipeda_IMO_8301187_into_IJmuiden%2C_Amsterdam_harbor_pic5.JPG/1600px-Margiris_%28ship%2C_1985%29_KL_749_Margiris_Klaipeda_IMO_8301187_into_IJmuiden%2C_Amsterdam_harbor_pic5.JPG" /> ;;
   }
+
+  dimension: flag_link {
+    sql:${flag};;
+    html: <img src="https://raw.githubusercontent.com/yoh/iso-3166-flags/master/svg-iso3/country-squared/{{value}}.svg" /> ;;
+  }
 }
