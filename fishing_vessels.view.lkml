@@ -88,7 +88,7 @@ view: fishing_vessels {
   }
 
   dimension: flag_link {
-    sql:${flag};;
-    html: <img src="https://raw.githubusercontent.com/yoh/iso-3166-flags/master/svg-iso3/country-squared/{{value}}.svg" /> ;;
+    sql:lower(${flag});;
+    html: <img src="https://github.com/yoh/iso-3166-flags/blob/master/svg-iso3/country-4x3/{{value}}.svg" /> ;;
   }
 }
