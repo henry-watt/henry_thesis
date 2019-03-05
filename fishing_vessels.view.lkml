@@ -89,6 +89,20 @@ view: fishing_vessels {
 
   dimension: flag_link {
     sql:lower(${flag});;
-    html: <img src="https://github.com/yoh/iso-3166-flags/blob/master/svg-iso3/country-4x3/{{value}}.svg" /> ;;
+    html: <img src="https://raw.githubusercontent.com/adamoliver/Country-Flags-ISO-3/master/gif/{{rendered_value}}.gif"/> ;;
+  }
+
+  dimension: fishing_type{
+    type: string
+    sql:
+        CASE
+            WHEN ${geartype} = 'trawlers' THEN 'Trawlers'
+            WHEN ${geartype} = 'fixed_gear' THEN 'Fixed Gear'
+            WHEN ${geartype} = 'purse_seines' THEN 'Purse Seines'
+            WHEN ${geartype} = 'drifting_longlines' THEN 'Drifting Longlines'
+            WHEN ${geartype} = 'squid_jigger' THEN ('Squid Jigger')
+            WHEN ${geartype} = 'other_fishing' THEN ('Other Fishing Type')
+            ELSE NULL
+        END ;;
   }
 }
