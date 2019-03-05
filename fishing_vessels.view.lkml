@@ -96,12 +96,12 @@ view: fishing_vessels {
     type: string
     sql:
         CASE
-            WHEN ${geartype} = 'trawlers' THEN 'Trawlers'
+            WHEN ${geartype} = 'trawlers' THEN 'Trawler'
             WHEN ${geartype} = 'fixed_gear' THEN 'Fixed Gear'
-            WHEN ${geartype} = 'purse_seines' THEN 'Purse Seines'
-            WHEN ${geartype} = 'drifting_longlines' THEN 'Drifting Longlines'
-            WHEN ${geartype} = 'squid_jigger' THEN ('Squid Jigger')
-            WHEN ${geartype} = 'other_fishing' THEN ('Other Fishing Type')
+            WHEN ${geartype} = 'purse_seines' THEN 'Purse Seine'
+            WHEN ${geartype} = 'drifting_longlines' THEN 'Drifting Longline'
+            WHEN ${geartype} = 'squid_jigger' THEN 'Squid Jigger'
+            WHEN ${geartype} = 'other_fishing' THEN 'Other Fishing Type'
             ELSE NULL
         END ;;
   }
