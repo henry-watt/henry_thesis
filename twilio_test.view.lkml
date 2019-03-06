@@ -12,7 +12,7 @@ view: twilio_test {
       derived_column: geopoint{
         sql: ST_GEOGPOINT(longitude_bin,latitude_bin) ;;
       }
-      derived_column: within {
+      derived_column: within_1 {
         sql: ST_DWithin(ST_GEOGPOINT(longitude_bin,latitude_bin), ST_GEOGPOINT(55.2286111,-7.78944444), 5000) ;;
       }
 
@@ -34,6 +34,6 @@ view: twilio_test {
 
   dimension: geopoint {}
 
-  dimension: within {}
+  dimension: within_1 {}
 
 }
