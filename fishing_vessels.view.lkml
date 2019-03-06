@@ -92,6 +92,22 @@ view: fishing_vessels {
     html: <img src="https://raw.githubusercontent.com/adamoliver/Country-Flags-ISO-3/master/gif/{{rendered_value}}.gif"/> ;;
   }
 
+  dimension: url_field_1 {
+    hidden: yes
+    type: string
+    sql:
+        CASE
+            WHEN ${geartype} = 'Trawler' THEN ('https://en.wikipedia.org/wiki/Fishing_trawler')
+            WHEN ${geartype} = 'Fixed Gear' THEN ('https://definedterm.com/fixed_gear/178332')
+            WHEN ${geartype} = 'Purse Seine' THEN ('https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-purse-seines')
+            WHEN ${geartype} = 'Drifting Longline' THEN ('http://www.fao.org/fishery/geartype/233/en')
+            WHEN ${geartype} = 'Squid Jigger' THEN ('http://www.fao.org/fishery/vesseltype/330/en')
+            WHEN ${geartype} = 'Other Fishing Type' THEN ('http://www.fao.org/fishery/vesseltype/search/en')
+            ELSE NULL
+        END ;;
+  }
+
+
   dimension: fishing_type {
     type: string
     sql:
@@ -110,18 +126,5 @@ view: fishing_vessels {
     }
   }
 
-  dimension: url_field_1 {
-    hidden: yes
-    type: string
-      sql:
-        CASE
-            WHEN ${geartype} = 'Trawler' THEN ('https://en.wikipedia.org/wiki/Fishing_trawler')
-            WHEN ${geartype} = 'Fixed Gear' THEN ('https://definedterm.com/fixed_gear/178332')
-            WHEN ${geartype} = 'Purse Seine' THEN ('https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-purse-seines')
-            WHEN ${geartype} = 'Drifting Longline' THEN ('http://www.fao.org/fishery/geartype/233/en')
-            WHEN ${geartype} = 'Squid Jigger' THEN ('http://www.fao.org/fishery/vesseltype/330/en')
-            WHEN ${geartype} = 'Other Fishing Type' THEN ('http://www.fao.org/fishery/vesseltype/search/en')
-            ELSE NULL
-        END ;;
-}
+
 }
