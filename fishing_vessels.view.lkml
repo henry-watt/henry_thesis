@@ -120,11 +120,26 @@ view: fishing_vessels {
             WHEN ${geartype} = 'other_fishing' THEN 'Other Fishing Type'
             ELSE NULL
         END ;;
-    link: {
-      url: "{{ fishing_vessels.url_field_1._value }}"
-      label: "{{ value }}"
+      link: {
+        url: "{{ fishing_vessels.url_field_1._value }}"
+        label: "{{ value }}"
     }
   }
 
-
+  dimension: Fishing_Style {
+    type: string
+    sql: CASE
+            WHEN ${TABLE}.geartype = 'trawlers' THEN 'Trawler'
+            WHEN ${TABLE}.geartype = 'fixed_gear' THEN 'Fixed Gear'
+            WHEN ${TABLE}.geartype = 'purse_seines' THEN 'Purse Seine'
+            WHEN ${TABLE}.geartype = 'drifting_longlines' THEN 'Drifting Longline'
+            WHEN ${TABLE}.geartype = 'squid_jigger' THEN 'Squid Jigger'
+            WHEN ${TABLE}.geartype = 'other_fishing' THEN 'Other Fishing Type'
+            ELSE NULL
+        END ;;
+    link: {
+      url: "{{ fishing_vessels.url_field._value }}"
+      label: "{{ value }}"
+    }
+}
 }
