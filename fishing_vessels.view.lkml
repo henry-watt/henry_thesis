@@ -92,7 +92,7 @@ view: fishing_vessels {
     html: <img src="https://raw.githubusercontent.com/adamoliver/Country-Flags-ISO-3/master/gif/{{rendered_value}}.gif"/> ;;
   }
 
-  dimension: fishing_type{
+  dimension: fishing_type {
     type: string
     sql:
         CASE
@@ -104,5 +104,24 @@ view: fishing_vessels {
             WHEN ${geartype} = 'other_fishing' THEN 'Other Fishing Type'
             ELSE NULL
         END ;;
+    link: {
+      url: "{{ fishing_vessels.url_field_1._value }}"
+      label: "{{ value }}"
+    }
   }
+
+  dimension: url_field_1 {
+    hidden: yes
+    type: string
+      sql:
+        CASE
+            WHEN ${geartype} = 'Trawler' THEN ('https://en.wikipedia.org/wiki/Fishing_trawler')
+            WHEN ${geartype} = 'Fixed Gear' THEN ('https://definedterm.com/fixed_gear/178332')
+            WHEN ${geartype} = 'Purse Seine' THEN ('https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-purse-seines')
+            WHEN ${geartype} = 'Drifting Longline' THEN ('http://www.fao.org/fishery/geartype/233/en')
+            WHEN ${geartype} = 'Squid Jigger' THEN ('http://www.fao.org/fishery/vesseltype/330/en')
+            WHEN ${geartype} = 'Other Fishing Type' THEN ('http://www.fao.org/fishery/vesseltype/search/en')
+            ELSE NULL
+        END ;;
+}
 }
