@@ -94,4 +94,10 @@ view: fishing_effort {
             ELSE NULL
         END ;;
   }
+
+  dimension: test {
+    type: string
+    sql: "huo" ;;
+    html: <img src="https://www.publicdomainpictures.net/pictures/140000/velka/banner-header-1449745167Dld.jpg#.XIvn7-H1ZD4.link" width="100%" /> ;;
+  }
 }

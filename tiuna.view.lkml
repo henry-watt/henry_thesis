@@ -185,9 +185,6 @@ view: tiuna {
   }
 
 
-  measure: count {
-    type: count
-  }
 
   dimension: coordinates {
     type: location

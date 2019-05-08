@@ -2,7 +2,7 @@ view: fishing_effort_byvessel {
   sql_table_name: globalfishingwatch.fishing_effort_byvessel ;;
 
   dimension: date {
-    type: string
+    type: date
     sql: ${TABLE}.date ;;
   }
 

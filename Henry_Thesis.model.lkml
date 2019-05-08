@@ -40,6 +40,10 @@ explore: fishing_vessels {
 
 explore: vessels {}
 
+explore: testing {
+    extends: [fishing_timelines]
+  }
+
 explore: tiuna {}
 
 explore: ISO3 {}

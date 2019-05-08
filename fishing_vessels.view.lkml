@@ -54,7 +54,7 @@ view: fishing_vessels {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [mmsi]
   }
 
   dimension: geartype {
@@ -90,6 +90,14 @@ view: fishing_vessels {
   dimension: flag_link {
     sql:lower(${flag});;
     html: <img src="https://raw.githubusercontent.com/adamoliver/Country-Flags-ISO-3/master/gif/{{rendered_value}}.gif"/> ;;
+  }
+
+  dimension: linky {
+    sql: ${flag} ;;
+    link: {
+      url: "www.google.com"
+
+    }
   }
 
   dimension: url_field_1 {
