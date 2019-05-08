@@ -1,6 +1,6 @@
 
 - dashboard: untitled
-  title: diego is handsome
+  title: TIUNA
   layout: newspaper
   elements:
   - title: Untitled
