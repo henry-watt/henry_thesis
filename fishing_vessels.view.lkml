@@ -37,7 +37,7 @@ view: fishing_vessels {
   }
 
   dimension: length {
-    type: number
+    type: string
     sql: ${TABLE}.length ;;
   }
 
