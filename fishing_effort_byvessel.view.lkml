@@ -3,7 +3,7 @@ view: fishing_effort_byvessel {
 
   dimension: date {
     type: date
-    sql: ${TABLE}.date ;;
+    sql:CAST(${TABLE}.date as timestamp) ;;
   }
 
   dimension: fishing_hours {
