@@ -36,6 +36,12 @@ view: fishing_vessels {
     sql: ${TABLE}.flag ;;
   }
 
+  dimension: html_test{
+    type: string
+    html: <div style="text-color:green;text-size:6px"><b>Sometext</b></div> ;;
+
+  }
+
   dimension: length {
     type: string
     sql: ${TABLE}.length ;;
