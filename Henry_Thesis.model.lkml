@@ -11,6 +11,7 @@ map_layer: countries_maritime {
 
 
 explore: fishing_effort {
+ # sql_always_where: {% condition date_filter %} fishing_effort.date {% endcondition %} ;;
   join: population {
     type: inner
     relationship: one_to_one

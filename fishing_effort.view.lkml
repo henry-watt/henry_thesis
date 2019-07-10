@@ -100,4 +100,46 @@ view: fishing_effort {
     sql: "huo" ;;
     html: <img src="https://www.publicdomainpictures.net/pictures/140000/velka/banner-header-1449745167Dld.jpg#.XIvn7-H1ZD4.link" width="100%" /> ;;
   }
+
+  parameter: date_filter {
+    type: date_time
+    allowed_value: {
+      label: "Yesterday"
+      value: "Yesterday"
+    }
+    allowed_value: {
+      label: "Week to date"
+      value: "This week"
+    }
+    allowed_value: {
+      label: "Last week"
+      value: "Last Week"
+    }
+    allowed_value: {
+      label: "Month to date"
+      value: "This Month"
+    }
+    allowed_value: {
+      label: "Last month"
+      value: "Last Month"
+    }
+    allowed_value: {
+      label: "Quarter to date"
+      value: "This Quarter"
+    }
+    allowed_value: {
+      label: "Last quarter"
+      value: "Last Quarter"
+    }
+    allowed_value: {
+      label: "Year to date"
+      value: "This Year"
+    }
+    allowed_value: {
+      label: "Full year LY"
+      value: "Last Year"
+    }
+
+
+}
 }

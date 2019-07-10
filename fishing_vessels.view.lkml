@@ -90,12 +90,15 @@ view: fishing_vessels {
 
   dimension: looker_image {
     type: string
-    html: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Margiris_%28ship%2C_1985%29_KL_749_Margiris_Klaipeda_IMO_8301187_into_IJmuiden%2C_Amsterdam_harbor_pic5.JPG/1600px-Margiris_%28ship%2C_1985%29_KL_749_Margiris_Klaipeda_IMO_8301187_into_IJmuiden%2C_Amsterdam_harbor_pic5.JPG" /> ;;
-  }
+    html: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Margiris_%28ship%2C_1985%29_KL_749_Margiris_Klaipeda_IMO_8301187_into_IJmuiden%2C_Amsterdam_harbor_pic5.JPG/1600px-Margiris_%28ship%2C_1985%29_KL_749_Margiris_Klaipeda_IMO_8301187_into_IJmuiden%2C_Amsterdam_harbor_pic5.JPG" />
+ </div>;; }
+
+
+
 
   dimension: flag_link {
     sql:lower(${flag});;
-    html: <img src="https://raw.githubusercontent.com/adamoliver/Country-Flags-ISO-3/master/gif/{{rendered_value}}.gif"/> ;;
+    html: <div align="center"><img src="https://raw.githubusercontent.com/adamoliver/Country-Flags-ISO-3/master/gif/{{rendered_value}}.gif"/> </div>;;
   }
 
   dimension: linky {
