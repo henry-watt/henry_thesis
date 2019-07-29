@@ -191,5 +191,5 @@ view: tiuna {
     sql_latitude:${latitude} ;;
     sql_longitude:${longitude} ;;
   }
-
 }
+
