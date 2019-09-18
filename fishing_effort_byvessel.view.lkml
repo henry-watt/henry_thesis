@@ -4,6 +4,12 @@ view: fishing_effort_byvessel {
   dimension: date {
     type: date
     sql:CAST(${TABLE}.date as timestamp) ;;
+
+
+    link: {
+      label: "Custom Date Drill"
+      url: "https://dcl.dev.looker.com/dashboards/415&Date_filter={{ _filters['fishing_effort.Date'] }}"
+    }
   }
 
   dimension: fishing_hours {
@@ -23,6 +29,11 @@ view: fishing_effort_byvessel {
 
   dimension: mmsi {
     type: number
+    link: {
+      label: "Custom Drill"
+      url: "https://dcl.dev.looker.com/dashboards/414?mmsi={{value}}
+      &fishingeffort={{fishing_effort_byvessel.fishing_hours._value|url_encode}}"
+    }
     sql: ${TABLE}.mmsi ;;
   }
 
@@ -63,12 +74,13 @@ view: fishing_effort_byvessel {
 
   dimension: geopoint {
     sql: ST_GEOGPOINT(${longitude_bin},${latitude_bin});;
+    type: location
   }
 
-  dimension: within {
-    sql: ST_DWithin(${geopoint}, ST_GEOGPOINT(-7.78944444, 55.2286111), 5000) ;;
-    type: yesno
-  }
+  #dimension: within {
+    #sql: ST_DWithin(${geopoint}, ST_GEOGPOINT(-7.78944444, 55.2286111), 5000) ;;
+    #type: yesno
+  #}¯
 
   dimension: 3_billion {
     type: number
@@ -98,5 +110,10 @@ view: fishing_effort_byvessel {
 
   set: test_set {
     fields: [geopoint,count_distinct_test]
+  }
+
+  measure: failed_attempt {
+    type: number
+    sql:  ${3_billion}}/0;;
   }
 }

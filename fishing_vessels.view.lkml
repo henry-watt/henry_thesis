@@ -44,7 +44,7 @@ view: fishing_vessels {
 
   dimension: length {
     type: string
-    sql: ${TABLE}.length ;;
+    sql: distinct(${TABLE}.length) ;;
   }
 
   dimension: mmsi {

@@ -1,5 +1,6 @@
 view: fishing_effort {
   sql_table_name: globalfishingwatch.fishing_effort ;;
+  label: "test"
 
   dimension: date {
     type: string
