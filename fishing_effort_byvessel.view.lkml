@@ -8,7 +8,7 @@ view: fishing_effort_byvessel {
 
     link: {
       label: "Custom Date Drill"
-      url: "https://dcl.dev.looker.com/dashboards/415&Date_filter={{ _filters['fishing_effort.Date'] }}"
+      url: "https://dcl.dev.looker.com/dashboards/415&Date filter={{ _filters['fishing_effort.date'] | url_encode }}"
     }
   }
 
@@ -31,7 +31,7 @@ view: fishing_effort_byvessel {
     type: number
     sql: ${TABLE}.mmsi ;;
     link: {
-      label: "Custom Drill"
+      label: "Custom Drill, passing two values"
       url: "https://dcl.dev.looker.com/dashboards/415?Mmsi={{ value }}&Fishing={{ fishing_effort_byvessel.fishing_hours._value | url_encode }}"
 
     #&Fishing Hours={{ fishing_effort_byvessel.fishing_hours | url_encode }}"
