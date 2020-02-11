@@ -8,7 +8,7 @@ view: fishing_effort_byvessel {
 
     link: {
       label: "Custom Date Drill"
-      url: "https://dcl.dev.looker.com/dashboards/415&Date={{ _filters['fishing_effort_byvessel.date'] | url_encode }}"
+      url: "https://dcl.dev.looker.com/dashboards/415?Date={{ _filters['fishing_effort_byvessel.date'] | url_encode }}"
     }
   }
 
