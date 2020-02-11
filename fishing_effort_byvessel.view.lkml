@@ -32,10 +32,10 @@ view: fishing_effort_byvessel {
     sql: ${TABLE}.mmsi ;;
     link: {
       label: "Custom Drill"
-      url: "https://dcl.dev.looker.com/dashboards/415?Mmsi={{ value | url_encode }}"
+      url: "https://dcl.dev.looker.com/dashboards/415?Mmsi={{ value }}"
+      #_filters{{ view_name.field_name  | url encode }}
     #&Fishing Hours={{ fishing_effort_byvessel.fishing_hours | url_encode }}"
           }
-
   }
 
   measure: count {
