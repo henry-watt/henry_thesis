@@ -31,9 +31,9 @@ view: fishing_effort_byvessel {
     type: number
     link: {
       label: "Custom Drill"
-      url: "https://dcl.dev.looker.com/dashboards/414?mmsi={{value}}
-      &fishingeffort={{fishing_effort_byvessel.fishing_hours._value|url_encode}}"
-    }
+      url: "https://dcl.dev.looker.com/dashboards/415?mmsi={{value}}
+      &fishingeffort={{ _filters['fishing_effort_byvessel.fishing_hours']"
+          }
     sql: ${TABLE}.mmsi ;;
   }
 
