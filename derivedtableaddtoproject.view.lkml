@@ -19,12 +19,12 @@ view: derivedtableaddtoproject {
   }
 
   dimension: fishing_effort_date {
-    type: string
+    type: date
     sql: ${TABLE}.fishing_effort_date ;;
   }
 
   filter: date_filter {
-    type: string
+    type: date
     suggestions: ["2012-01-01", "2012-01-02"]
   }
 
