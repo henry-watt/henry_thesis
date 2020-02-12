@@ -31,13 +31,14 @@ view: fishing_effort_byvessel {
     type: number
     sql: ${TABLE}.mmsi ;;
     link: {
+      label:"Explore custom drill"
+      url: "https://dcl.dev.looker.com/explore/Henry_Thesis/fishing_timelines?fields=fishing_effort_byvessel.date,fishing_effort_byvessel.mmsi,fishing_effort_byvessel.fishing_hours,fishing_vessels.flag&f[fishing_effort_byvessel.date]={{ value }}"
+      }
+
+    link: {
       label: "Custom Drill, passing two values"
       url: "https://dcl.dev.looker.com/dashboards/415?Mmsi={{ value }}&Fishing={{ fishing_effort_byvessel.fishing_hours._value | url_encode }}"
-          }
-    link: {
-      label:"Explore custom drill"
-      url: "/explore/Henry_Thesis/fishing_timelines?fields=fishing_effort_byvessel.date,fishing_effort_byvessel.mmsi,fishing_effort_byvessel.fishing_hours,fishing_vessels.flag&f[fishing_effort_byvessel.date]={{ value }}"
-      }
+    }
   }
 
   measure: count {
