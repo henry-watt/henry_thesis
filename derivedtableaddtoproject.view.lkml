@@ -38,7 +38,7 @@ view: derivedtableaddtoproject {
   }
 
   parameter: geartype_selector {
-    type: unquoted
+    type: string
     allowed_value: {
       label: "Fixed Gear"
       value: "fixed_gear"
