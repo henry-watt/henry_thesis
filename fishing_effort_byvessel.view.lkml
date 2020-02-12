@@ -10,9 +10,15 @@ view: fishing_effort_byvessel {
       url: "https://dcl.dev.looker.com/dashboards/415?Date={{ _filters['fishing_effort_byvessel.date'] | url_encode }}"
     }
     link: {
-      label:"Explore custom drill"
+      label:"Explore field custom drill"
       url: "https://dcl.dev.looker.com/explore/Henry_Thesis/fishing_timelines?fields=fishing_effort_byvessel.date,fishing_effort_byvessel.mmsi,fishing_effort_byvessel.fishing_hours,fishing_vessels.flag&f[fishing_effort_byvessel.date]={{ value }}"
     }
+
+    link: {
+      label: "Explore filter custom drill"
+      url: "https://dcl.dev.looker.com/explore/Henry_Thesis/fishing_timelines?fields=fishing_effort_byvessel.date,fishing_effort_byvessel.mmsi,fishing_effort_byvessel.fishing_hours,fishing_vessels.flag&f[fishing_effort_byvessel.date]={{ _filters['fishing_effort_byvessel.date'] | url_encode }}"
+      }
+
   }
 
   dimension: fishing_hours {
