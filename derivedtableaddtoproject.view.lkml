@@ -1,7 +1,7 @@
 view: derivedtableaddtoproject {
   derived_table: {
     sql: SELECT
-        fishing_effort.date  AS fishing_effort_date,
+        CAST(fishing_effort.date AS TIMESTAMP)  AS fishing_effort_date,
         fishing_effort.geartype  AS fishing_effort_geartype
       FROM globalfishingwatch.fishing_effort  AS fishing_effort
       WHERE {% condition date_filter %} fishing_effort.date {% endcondition %}
@@ -24,7 +24,7 @@ view: derivedtableaddtoproject {
   }
 
   filter: date_filter {
-    type: date
+    type: string
     suggestions: ["2012-01-01", "2012-01-02"]
   }
 
