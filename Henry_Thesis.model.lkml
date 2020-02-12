@@ -73,3 +73,4 @@ explore: fishing_timelines {
     sql_on: ${ISO3.code} = ${population.code};;
   }
   }
+explore: derivedtableaddtoproject {}
