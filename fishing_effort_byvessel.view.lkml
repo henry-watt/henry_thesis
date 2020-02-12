@@ -5,10 +5,13 @@ view: fishing_effort_byvessel {
     type: date
     sql:CAST(${TABLE}.date as timestamp) ;;
 
-
     link: {
       label: "Custom Date Drill"
       url: "https://dcl.dev.looker.com/dashboards/415?Date={{ _filters['fishing_effort_byvessel.date'] | url_encode }}"
+    }
+    link: {
+      label:"Explore custom drill"
+      url: "https://dcl.dev.looker.com/explore/Henry_Thesis/fishing_timelines?fields=fishing_effort_byvessel.date,fishing_effort_byvessel.mmsi,fishing_effort_byvessel.fishing_hours,fishing_vessels.flag&f[fishing_effort_byvessel.date]={{ value }}"
     }
   }
 
@@ -30,10 +33,6 @@ view: fishing_effort_byvessel {
   dimension: mmsi {
     type: number
     sql: ${TABLE}.mmsi ;;
-    link: {
-      label:"Explore custom drill"
-      url: "https://dcl.dev.looker.com/explore/Henry_Thesis/fishing_timelines?fields=fishing_effort_byvessel.date,fishing_effort_byvessel.mmsi,fishing_effort_byvessel.fishing_hours,fishing_vessels.flag&f[fishing_effort_byvessel.date]={{ value }}"
-      }
 
     link: {
       label: "Custom Drill, passing two values"
