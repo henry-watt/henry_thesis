@@ -5,6 +5,7 @@ view: derivedtableaddtoproject {
         fishing_effort.geartype  AS fishing_effort_geartype
       FROM globalfishingwatch.fishing_effort  AS fishing_effort
       WHERE {% condition date_filter %} fishing_effort.date {% endcondition %}
+    AND fishing_effort.geartype = {% parameter geartype_selector %}
       GROUP BY 1,2
       ORDER BY 1
       LIMIT 500
@@ -36,8 +37,7 @@ view: derivedtableaddtoproject {
     fields: [fishing_effort_date, fishing_effort_geartype]
   }
 
-  parameter: sale_price_metric_picker {
-    description: "Use with the Sale Price Metric measure"
+  parameter: geartype_selector {
     type: unquoted
     allowed_value: {
       label: "Fixed Gear"
