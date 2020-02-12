@@ -12,7 +12,6 @@ view: derivedtableaddtoproject {
        ;;
   }
 
-
   measure: count {
     type: count
     drill_fields: [detail*]
@@ -22,6 +21,7 @@ view: derivedtableaddtoproject {
     type: date
     sql: ${TABLE}.fishing_effort_date ;;
   }
+
 
   filter: date_filter {
     type: string
@@ -52,9 +52,9 @@ view: derivedtableaddtoproject {
   dimension: dynamic_date {
     sql:
         {% if geartype_selector._parameter_value == "fixed_gear" %}
-          FORMAT_DATE('%m/%d/%Y', DATE ${fishing_effort_date})
+          FORMAT_DATE('%m/%d/%Y', EXTRACT(DATE from ${fishing_effort_date})
         {% elsif geartype_selector._parameter_value == "purse_seines" %}
-          FORMAT_DATE('%d/%m/%Y', DATE ${fishing_effort_date})
+          FORMAT_DATE('%d/%m/%Y', EXTRACT(DATE from ${fishing_effort_date})
         {% else %}
           ${fishing_effort_date}
         {% endif %};;
