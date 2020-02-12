@@ -23,7 +23,8 @@ view: derivedtableaddtoproject {
   }
 
   filter: date_filter {
-    type: date
+    type: string
+    suggestions: ["2012-01-01", "2012-01-02"]
   }
 
   dimension: fishing_effort_geartype {
@@ -33,5 +34,18 @@ view: derivedtableaddtoproject {
 
   set: detail {
     fields: [fishing_effort_date, fishing_effort_geartype]
+  }
+
+  parameter: sale_price_metric_picker {
+    description: "Use with the Sale Price Metric measure"
+    type: unquoted
+    allowed_value: {
+      label: "Fixed Gear"
+      value: "fixed_gear"
+    }
+    allowed_value: {
+      label: "Purse Seines"
+      value: "purse_seines"
+    }
   }
 }
