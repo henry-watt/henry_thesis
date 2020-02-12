@@ -58,5 +58,6 @@ view: derivedtableaddtoproject {
         {% else %}
           ${fishing_effort_date}
         {% endif %};;
+      type: date
   }
   }
