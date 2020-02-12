@@ -19,12 +19,12 @@ view: derivedtableaddtoproject {
   }
 
   dimension: fishing_effort_date {
-    type: date
+    type: string
     sql: ${TABLE}.fishing_effort_date ;;
   }
 
   filter: date_filter {
-    type: date
+    type: string
     suggestions: ["2012-01-01", "2012-01-02"]
   }
 
@@ -52,9 +52,9 @@ view: derivedtableaddtoproject {
   dimension: dynamic_date {
     sql:
         {% if geartype_selector._parameter_value == "fixed_gear" %}
-          FORMAT_DATE(${TABLE}.fishing_effort_date, '%m/%d/%Y')
+          FORMAT_DATE(DATE ${TABLE}.fishing_effort_date, '%m/%d/%Y')
         {% elsif geartype_selector._parameter_value == "purse_seines" %}
-          FORMAT_DATE(${TABLE}.fishing_effort_date, '%d/%m/%Y')
+          FORMAT_DATE(DATE ${TABLE}.fishing_effort_date, '%d/%m/%Y')
         {% else %}
           ${fishing_effort_date}
         {% endif %};;
