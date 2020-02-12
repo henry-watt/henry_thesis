@@ -36,6 +36,10 @@ view: fishing_effort_byvessel {
 
     #&Fishing Hours={{ fishing_effort_byvessel.fishing_hours | url_encode }}"
           }
+    link: {
+      label:"Explore custom drill"
+      url: "/explore/Henry_Thesis/fishing_timelines?fields=fishing_effort_byvessel.date,fishing_effort_byvessel.mmsi,fishing_effort_byvessel.fishing_hours,fishing_vessels.flag&f[fishing_effort_byvessel.date]={{ value }}"
+      }
   }
 
   measure: count {
