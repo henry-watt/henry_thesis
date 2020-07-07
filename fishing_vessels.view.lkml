@@ -34,6 +34,7 @@ view: fishing_vessels {
   dimension: flag {
     type: string
     sql: ${TABLE}.flag ;;
+    group_label: "group_label"
   }
 
   dimension: html_test{
@@ -45,6 +46,7 @@ view: fishing_vessels {
   dimension: length {
     type: string
     sql: distinct(${TABLE}.length) ;;
+    group_label: "group_label"
   }
 
   dimension: mmsi {

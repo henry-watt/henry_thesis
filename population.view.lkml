@@ -77,4 +77,34 @@ view: population {
   measure: count {
     type: count
   }
+
+  parameter: p_a {
+    type: string
+    allowed_value: { label:"a" value: "a"}
+    allowed_value: { label:"b" value: "b"}
+  }
+
+  parameter: p_b {
+    type: string
+    allowed_value: {label:"c" value: "c"}
+    allowed_value: {label:"d" value: "d"}
+  }
+
+  parameter: p_c {
+    type: string
+    allowed_value: {label:"e" value: "e"}
+    allowed_value: {label:"f" value: "f"}
+  }
+
+  dimension: conditional_if_dimension {
+    type: string
+    sql: {% if (p_a._parameter_value == "'a'" and p_b._parameter_value == "'c'")  or (p_c._parameter_value == "'e'") %}
+         "a c"
+        {% elsif (p_a._parameter_value == "'b'" and p_b._parameter_value =="'d'") %}
+        "b d"
+        {% else %}
+        NULL
+        {% endif %} ;;
+  }
+
 }

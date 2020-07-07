@@ -9,6 +9,10 @@ map_layer: countries_maritime {
   property_key: "A3"
 }
 
+access_grant: private_info_showed {
+  user_attribute: private_info_showed
+  allowed_values: ["Yes"]
+}
 
 explore: fishing_effort {
 
@@ -74,3 +78,5 @@ explore: fishing_timelines {
   }
   }
 explore: derivedtableaddtoproject {}
+
+explore: sort_test {}

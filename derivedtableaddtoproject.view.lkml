@@ -51,10 +51,10 @@ view: derivedtableaddtoproject {
 
   dimension: dynamic_date {
     sql:
-        {% if geartype_selector._parameter_value == "fixed_gear" %}
-          FORMAT_DATE('%m/%d/%Y', EXTRACT(DATE from ${fishing_effort_date})
-        {% elsif geartype_selector._parameter_value == "purse_seines" %}
-          FORMAT_DATE('%d/%m/%Y', EXTRACT(DATE from ${fishing_effort_date})
+        {% if geartype_selector._parameter_value == "'fixed_gear'" %}
+          FORMAT_DATE('%m/%d/%Y', ${fishing_effort_date})
+        {% elsif geartype_selector._parameter_value == "'purse_seines'" %}
+          FORMAT_DATE('%d/%m/%Y', ${fishing_effort_date})
         {% else %}
           ${fishing_effort_date}
         {% endif %};;
