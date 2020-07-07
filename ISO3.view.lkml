@@ -1,5 +1,6 @@
 view: ISO3 {
   derived_table: {
+    sql_trigger_value: SELECT * FROM ${ISO3.SQL_TABLE_NAME};;
     sql:
       SELECT
       'ABW' AS code, 'Aruba' AS name
